@@ -27,7 +27,7 @@
             # Dot source the file and extract the function name and any aliases
             . $PublicFunctionFile.FullName
             $PublicFunctions += $PublicFunctionName
-            $PublicFunctionAliases = Get-Alias -Definition $PublicFunctionName -Scope Local -ErrorAction SilentlyContinue
+            $PublicFunctionAliases = Get-Alias -Definition $PublicFunctionName -Scope Local -ErrorAction Ignore
             Write-Debug "Aliases for $PublicFunctionName`: $PublicFunctionAliases"
             $PublicAliases += $PublicFunctionAliases
         }
